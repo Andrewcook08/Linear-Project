@@ -1,0 +1,21 @@
+switch to a banch named by what you are working on
+git checkout -b problem1
+
+Then make your changes in the branch
+
+Add the files that you changed, git add . adds all project files, git add <file> <file> .. adds those files
+git add .
+
+Commit with a message
+git commit -m "Solve problem1"
+
+This will push to the branch you created in github leaving the main branch alone for a pull request later
+git push origin problem1
+
+on GitHub: open a PR, merge if there are no conflicts, and select the delete branch after merging option in github
+
+On your local machine: Even after deleting the branch in github it will still exist locally.
+Follow these steps to move back to the main branch, pull the changes from the repo, and delete the local branch.
+git checkout main
+git pull origin main
+git branch -d problem1
